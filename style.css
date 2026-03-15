@@ -1,0 +1,356 @@
+/* Cards section layout for 4 cards in a row */
+.cards-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+    margin: 40px 0 0 0;
+}
+.card-link {
+    flex: 1 1 240px;
+    max-width: 300px;
+    min-width: 220px;
+    box-sizing: border-box;
+}
+@media (max-width: 1200px) {
+    .cards-section {
+        gap: 20px;
+    }
+    .card-link {
+        max-width: 45%;
+    }
+}
+@media (max-width: 800px) {
+    .cards-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card-link {
+        max-width: 90%;
+    }
+}
+/* Centered main page and piazza buttons */
+.center-btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 32px 0 24px 0;
+}
+.center-btn {
+    background: #fff;
+    color: #222;
+    font-size: 1.25rem;
+    font-weight: 700;
+    padding: 16px 48px;
+    border-radius: 32px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10), 0 1.5px 4px rgba(0,0,0,0.10);
+    text-decoration: none;
+    border: none;
+    letter-spacing: 1px;
+    margin: 0 auto;
+    display: inline-block;
+}
+.center-btn:hover {
+    background: #222;
+    color: #fff;
+    box-shadow: 0 6px 32px rgba(0,0,0,0.18);
+}
+/* Footer social icons */
+.footer-social {
+    margin-top: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    font-size: 1.08rem;
+}
+.footer-social span {
+    margin-right: 8px;
+    color: #222;
+    font-weight: 500;
+}
+.footer-icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    vertical-align: middle;
+    transition: transform 0.15s;
+}
+.footer-icon:hover {
+    transform: scale(1.12) rotate(-6deg);
+}
+/* Piazza image container and title overlay */
+.piazza-img-container {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    margin-bottom: 32px;
+}
+.piazza-img-title {
+    position: absolute;
+    top: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-shadow: 0 4px 16px rgba(0,0,0,0.45), 0 1px 2px rgba(0,0,0,0.25);
+    letter-spacing: 1px;
+    z-index: 2;
+    text-align: center;
+    padding: 0 16px;
+    width: 100%;
+    box-sizing: border-box;
+    pointer-events: none;
+}
+/* Piazza feature section (Figma style) */
+.piazza-feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 48px 16px 32px 16px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.piazza-big-img {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 24px;
+    margin-bottom: 32px;
+    object-fit: cover;
+}
+.piazza-desc {
+    font-size: 1.18rem;
+    color: #333;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+html, body {
+    height: 100%;
+    min-height: 100vh;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+    display: block;
+}
+
+.site-footer {
+    flex-shrink: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+main {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+.site-footer {
+    flex-shrink: 0;
+}
+/* Make card links look like cards, not links */
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.card-link:focus {
+    outline: 2px solid #1a73e8;
+    outline-offset: 2px;
+}
+/* Hero section with background image placeholder */
+.hero {
+    position: relative;
+    background: url('img/hero.png') center/cover no-repeat #e5e5e5;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    padding: 64px 20px 48px 20px;
+}
+.hero-title, .hero-subtitle {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 0;
+}
+/* Header minimal Figma style */
+.site-header {
+    background: #4059FF;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.header-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 24px 12px 24px;
+    
+}
+
+.hero-logo2 {
+    width: 106px;
+    height: 91px;
+    object-fit: contain;
+    margin-right: 12px;
+    margin-bottom: 11px;
+}
+
+
+.site-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+}
+.site-nav {
+    display: flex;
+    gap: 24px;
+}
+.site-nav a {
+    color: #1a73e8;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.05rem;
+    padding: 6px 0;
+    border-bottom: 2px solid transparent;
+    transition: border 0.2s, color 0.2s;
+}
+.site-nav a:hover {
+    color: #155ab6;
+    border-bottom: 2px solid #1a73e8;
+}
+
+/* Cards Section Figma style */
+.cards-section {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin: 0 auto 48px auto;
+    max-width: 1100px;
+    flex-wrap: wrap;
+}
+.card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+    padding: 0 0 24px 0;
+    width: 320px;
+    text-align: left;
+    transition: transform 0.18s, box-shadow 0.18s;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    overflow: hidden;
+}
+.card:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(26,115,232,0.13);
+}
+.card-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 0;
+    margin-bottom: 0;
+    display: block;
+}
+.card-content {
+    padding: 22px 20px 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.card-title {
+    font-size: 1.22rem;
+    font-weight: 700;
+    margin: 0 0 2px 0;
+    color: #1a73e8;
+}
+.card-desc {
+    font-size: 1rem;
+    color: #444;
+    margin: 0;
+}
+
+/* Footer minimal Figma style */
+.site-footer {
+    background: #4059FF;
+    color: #888;
+    text-align: center;
+    padding: 24px 0 18px 0;
+    font-size: 1rem;
+    margin-top: 48px;
+    border-top: 1px solid #e5e5e5;
+}
+
+@media (max-width: 1000px) {
+    .cards-section {
+        gap: 18px;
+    }
+    .header-content {
+        flex-direction: column;
+        gap: 10px;
+        padding: 18px 10px 8px 10px;
+        
+    }
+}
+@media (max-width: 900px) {
+    .cards-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        width: 95%;
+        margin-bottom: 24px;
+    }
+}
+@media (max-width: 600px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    .hero {
+        padding: 40px 10px 24px 10px;
+    }
+    .header-content {
+        padding: 12px 4px 6px 4px;
+    }
+}
+body {
+    margin: 0;
+    font-family: 'Montserrat', Arial, sans-serif;
+    background: #f5f5f5;
+    color: #222;
+}
